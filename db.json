@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "title": "The Sparrow",
+      "rating": "3",
+      "id": 2
+    },
+    {
+      "title": "Hyperion",
+      "rating": "3",
+      "id": 3
+    },
+    {
+      "title": "Notes from the Underground",
+      "rating": "5",
+      "id": 4
+    }
+  ]
+}
