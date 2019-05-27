@@ -1,3 +1,8 @@
+### To run the project :
+###  1. npm run json:server 
+###  2. npm start
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
