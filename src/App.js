@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   addBook() {
-    axios.post('http://localhost:3000/books', this.state.newBookData).then((response) => {
+    axios.post('https://bookss-app.herokuapp.com/books/', this.state.newBookData).then((response) => {
       let { books } = this.state;
 
       books.push(response.data);
@@ -48,7 +48,7 @@ class App extends Component {
 updateBook() {
   let { title, rating } = this.state.editBookData;
 
-  axios.put('http://localhost:3000/books/' + this.state.editBookData.id, {
+  axios.put('https://bookss-app.herokuapp.com/books/' + this.state.editBookData.id, {
     title, rating
   }).then((response) => {
     this._refreshBooks();
@@ -66,7 +66,7 @@ editBook(id, title, rating) {
 }
 
 _refreshBooks() {
-  axios.get('http://localhost:3000/books').then((response) => {
+  axios.get('https://bookss-app.herokuapp.com/books/').then((response) => {
     this.setState({
       books: response.data
     })
@@ -74,7 +74,7 @@ _refreshBooks() {
 }
 
 deleteBook(id) {
-  axios.delete('http://localhost:3000/books/' + id).then((response) => {
+  axios.delete('https://bookss-app.herokuapp.com/books/' + id).then((response) => {
     this._refreshBooks();
   })
 }
